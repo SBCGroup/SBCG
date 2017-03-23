@@ -54,6 +54,7 @@ import java.awt.Window.Type;
 
 public class UserMaintain extends JFrame {
 
+	
 	private JPanel contentPane;
 	private JTable table;
 	private JCheckBox chkHideInactive;
