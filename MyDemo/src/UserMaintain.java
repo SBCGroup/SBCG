@@ -54,7 +54,7 @@ import java.awt.Window.Type;
 
 public class UserMaintain extends JFrame {
 
-	
+	// commit added by web.
 	private JPanel contentPane;
 	private JTable table;
 	private JCheckBox chkHideInactive;
@@ -124,8 +124,8 @@ public class UserMaintain extends JFrame {
 	private void refreshTable(){
 
 		try {
-			String query = "select cID as '¥Î¤á½s¸¹', cName as '¦WºÙ', cDepartment as '³¡ªù', cDB as '¥i¥Î¸ê®Æ®w', cSchRgt as '«D¾Ç®ÕºŞ¨î',";
-			query+=" cStatus as 'ª¬ºA' from sysdb.sysuser";
+			String query = "select cID as 'ç”¨æˆ¶ç·¨è™Ÿ', cName as 'åç¨±', cDepartment as 'éƒ¨é–€', cDB as 'å¯ç”¨è³‡æ–™åº«', cSchRgt as 'éå­¸æ ¡ç®¡åˆ¶',";
+			query+=" cStatus as 'ç‹€æ…‹' from sysdb.sysuser";
 			if (chkHideInactive.isSelected()) {
 				query = query + " where cstatus='A'";
 			}
@@ -143,7 +143,7 @@ public class UserMaintain extends JFrame {
 			table.getColumnModel().getColumn(5).setPreferredWidth(50);
 			
 			rCount = table.getRowCount();
-			lblTableSum.setText("·j´Mµ²ªG"+Integer.toString(rCount)+" µ§");
+			lblTableSum.setText("æœå°‹çµæœ"+Integer.toString(rCount)+" ç­†");
 			
 			pst.close();
 			rs.close();
@@ -339,7 +339,7 @@ public class UserMaintain extends JFrame {
 		contentPane.add(btnDelete);
 		
 		JLabel lblId = new JLabel("ID");
-		lblId.setFont(new Font("·s²Ó©úÅé", Font.BOLD, 12));
+		lblId.setFont(new Font("æ–°ç´°æ˜é«”", Font.BOLD, 12));
 		lblId.setForeground(Color.RED);
 		lblId.setBounds(745, 154, 46, 15);
 		contentPane.add(lblId);
