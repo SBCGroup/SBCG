@@ -52,9 +52,6 @@ import javax.swing.JComboBox;
 import java.awt.Dialog.ModalExclusionType;
 import java.awt.Window.Type;
 
-
-
-
 public class UserMaintain extends JFrame {
 
 	private JPanel contentPane;
