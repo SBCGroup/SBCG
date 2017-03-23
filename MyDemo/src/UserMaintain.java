@@ -124,8 +124,8 @@ public class UserMaintain extends JFrame {
 	private void refreshTable(){
 
 		try {
-			String query = "select cID as '用戶編號', cName as '名稱', cDepartment as '部門', cDB as '可用資料庫', cSchRgt as '非學校管制',";
-			query+=" cStatus as '狀態' from sysdb.sysuser";
+			String query = "select cID, cName, cDepartment, cDB, cSchRgt,";
+			query+=" cStatus from sysdb.sysuser";
 			if (chkHideInactive.isSelected()) {
 				query = query + " where cstatus='A'";
 			}
@@ -143,7 +143,7 @@ public class UserMaintain extends JFrame {
 			table.getColumnModel().getColumn(5).setPreferredWidth(50);
 			
 			rCount = table.getRowCount();
-			lblTableSum.setText("搜尋結果"+Integer.toString(rCount)+" 筆");
+			lblTableSum.setText("Total:"+Integer.toString(rCount));
 			
 			pst.close();
 			rs.close();
@@ -339,7 +339,7 @@ public class UserMaintain extends JFrame {
 		contentPane.add(btnDelete);
 		
 		JLabel lblId = new JLabel("ID");
-		lblId.setFont(new Font("新細明體", Font.BOLD, 12));
+		//lblId.setFont(new Font("���細������", Font.BOLD, 12));
 		lblId.setForeground(Color.RED);
 		lblId.setBounds(745, 154, 46, 15);
 		contentPane.add(lblId);
